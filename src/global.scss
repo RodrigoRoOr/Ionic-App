@@ -1,0 +1,141 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+.rojo, .rojo .sc-ion-action-sheet-md {
+    color: red !important;
+}
+
+ion-item {
+    --background: transparent;
+}
+
+ion-searchbar {
+    --box-shadow: none !important;
+}
+
+/* Modern, calm visual system ------------------------------------------------ */
+:root {
+  --ion-font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ion-background-color: #f7f8fc;
+  --ion-text-color: #1c2542;
+  --ion-color-primary: #5365cc;
+  --ion-color-primary-rgb: 83, 101, 204;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #4959b4;
+  --ion-color-primary-tint: #6474d1;
+  --ion-color-secondary: #32a99e;
+  --ion-color-secondary-rgb: 50, 169, 158;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #2c958b;
+  --ion-color-secondary-tint: #47b2a8;
+  --ion-color-success: #2ea877;
+  --ion-color-warning: #e9a23b;
+  --ion-color-danger: #d95e70;
+  --ion-color-medium: #77809a;
+  --ion-color-light: #f7f8fc;
+}
+
+ion-content { --background: #f7f8fc; }
+ion-toolbar { --background: #f7f8fc; --color: #19213d; --border-width: 0; }
+ion-title { font-weight: 750; letter-spacing: -.025em; }
+
+ion-button {
+  --border-radius: 14px;
+  --box-shadow: 0 8px 18px rgba(83, 101, 204, .18);
+  min-height: 46px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+ion-card {
+  margin: 12px 16px;
+  border: 1px solid #e8ebf5;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(29, 43, 89, .06);
+}
+ion-card-header { padding: 20px 20px 8px; }
+ion-card-title { color: #202943; font-size: 20px; font-weight: 750; letter-spacing: -.025em; }
+ion-card-subtitle { color: #7a86ac; font-size: 10px; font-weight: 800; letter-spacing: .09em; }
+ion-card-content { color: #66708b; line-height: 1.6; }
+
+ion-list {
+  margin: 12px 16px;
+  padding: 4px 0;
+  border: 1px solid #e8ebf5;
+  border-radius: 18px;
+  background: #fff;
+}
+ion-list-header { color: #5365cc; font-size: 11px; font-weight: 800; letter-spacing: .09em; }
+ion-item {
+  --background: transparent;
+  --color: #25304d;
+  --padding-start: 16px;
+  --inner-padding-end: 14px;
+  --min-height: 58px;
+  --border-color: #eef0f6;
+  font-size: 14px;
+  font-weight: 600;
+}
+ion-item ion-icon[slot="start"] { margin-right: 14px; color: #5365cc; font-size: 20px; }
+ion-item ion-label h2, ion-item ion-label h3 { color: #25304d; font-weight: 750; }
+ion-item ion-label p { color: #7e88a3; }
+
+ion-input, ion-textarea, ion-select {
+  --color: #243050;
+  --placeholder-color: #9aa3bc;
+  --placeholder-opacity: 1;
+  font-size: 14px;
+}
+ion-searchbar {
+  --background: #eef0f7;
+  --color: #263050;
+  --placeholder-color: #8e98b3;
+  --icon-color: #6673ad;
+  --border-radius: 14px;
+  padding: 4px 16px 12px !important;
+}
+ion-segment { margin: 12px 16px; width: auto; padding: 3px; border-radius: 14px; background: #eef0f7; }
+ion-segment-button { --indicator-color: #fff; --color: #77819d; --color-checked: #3d4fae; min-height: 39px; font-size: 12px; font-weight: 700; text-transform: none; }
+ion-tab-bar { --background: rgba(255, 255, 255, .96); border-top: 1px solid #e9ecf5; }
+ion-tab-button { --color: #929ab0; --color-selected: #5365cc; font-size: 10px; font-weight: 700; }
+
+.app-menu-header ion-toolbar { --background: #192650; --color: #fff; min-height: 92px; display: flex; align-items: center; padding: 12px 16px; }
+.app-menu-header ion-title { padding-left: 12px; font-size: 17px; }
+.app-menu-header ion-title span, .app-menu-header ion-title small { display: block; }
+.app-menu-header ion-title small { margin-top: 4px; color: #aebcff; font-size: 10px; font-weight: 600; letter-spacing: .06em; }
+.brand-mark { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 12px; color: #253666; background: #c4ceff; font-size: 18px; font-weight: 850; }
+.menu-caption { padding: 24px 22px 7px; color: #8b95b0; font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.app-menu-list { margin: 0 10px; border: 0; box-shadow: none; }
+.app-menu-list ion-item { --min-height: 48px; --border-color: transparent; border-radius: 12px; margin: 2px 0; font-size: 13px; }
+.app-menu-list ion-item:hover, .app-menu-list ion-item.item-active { --background: #edf0ff; }
+.app-menu-list ion-icon[slot="end"] { color: #abb3c8; font-size: 15px; }
+
+ion-modal .modal-wrapper, ion-popover .popover-content { --border-radius: 22px; }
+.rojo, .rojo .sc-ion-action-sheet-md { color: #d95e70 !important; }

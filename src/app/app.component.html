@@ -1,0 +1,41 @@
+<ion-app>
+
+
+  <ion-split-pane when="md" contentId="main">
+
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header class="app-menu-header">
+        <ion-toolbar>
+          <div class="brand-mark">C</div>
+          <ion-title>
+            <span>Componentes</span>
+            <small>Laboratorio Ionic</small>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div class="menu-caption">Explora componentes</div>
+        <ion-list class="app-menu-list">
+  
+          <ion-menu-toggle *ngFor="let c of componentes | async" 
+                           autoHide="false">
+            <ion-item [routerLink]="c.redirectTo" detail="false">
+              <ion-icon [name]="c.icon" slot="start"></ion-icon>
+              <ion-label>{{ c.name }}</ion-label>
+              <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+            </ion-item>
+          </ion-menu-toggle>
+  
+  
+        </ion-list>
+  
+      </ion-content>
+    </ion-menu>
+  
+  
+    <ion-router-outlet id="main"></ion-router-outlet>
+
+  </ion-split-pane>
+
+ 
+</ion-app>

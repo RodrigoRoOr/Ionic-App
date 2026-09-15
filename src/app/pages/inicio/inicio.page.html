@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border home-header">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+
+    <!-- <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons> -->
+
+    <ion-title>Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+
+  <section class="home-hero">
+    <span class="eyebrow">IONIC UI KIT</span>
+    <h1>Todo lo esencial,<br><strong>mejor organizado.</strong></h1>
+    <p>Una colección clara y práctica de experiencias móviles para explorar.</p>
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
+  </section>
+
+  <section class="component-section">
+    <div class="section-heading">
+      <div>
+        <span>CATÁLOGO</span>
+        <h2>Componentes</h2>
+      </div>
+      <ion-icon name="sparkles-outline"></ion-icon>
+    </div>
+
+    <ion-grid class="component-grid">
+      <ion-row>
+        <ion-col size="6" size-md="4" size-lg="3" *ngFor="let c of componentes | async">
+          <button class="component-tile" [routerLink]="c.redirectTo">
+            <span class="tile-icon"><ion-icon [name]="c.icon"></ion-icon></span>
+            <span>{{ c.name }}</span>
+            <ion-icon class="tile-arrow" name="arrow-up-outline"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+
+
+<!-- 
+  <ion-button routerLink="/alert">
+    Alert
+  </ion-button>
+
+
+  <ion-button routerLink="/action-sheet">
+    Action Sheet
+  </ion-button> -->
+
+
+</ion-content>
